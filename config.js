@@ -36,7 +36,7 @@ const config = {
         },
         {
             id: 'stage2-swipe1',
-            title: 'Stage 2: Person B - Swipe 1',
+            title: 'Husenjan Esqer',
             image: './images/personB1.jpg',
             description: 'Content for Person B, swipe 1.',
             location: {
