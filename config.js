@@ -26,7 +26,7 @@ const config = {
             image: './data/polp1.png',
             description: 'Chinese Name: 邓传彬 Occupation: Filmmaker, documentary  Issue Codes: June 4 1989 protests/speech Date of Detention: 2019/05/17 Legal Process: PSB Detention Facility: Nanxi PSB Det. Ctr. Detention Location: Sichuan Province  Information: According to RDN (18 May 19; 23 May 19), HKFP (24 May 19), CRLW (18 May 19) and China Aid (20 May 19), on May 17, 2019, public security officials in Yibin municipality, Sichuan province, detained videographer Deng Chuanbin. On or around the same day, police criminally detained him on suspicion of “picking quarrels and provoking trouble,” detaining him at the Nanxi PSB Detention Center in Nanxi district, Yibin. On the evening of May 16, Deng shared on Twitter an image of a liquor bottle that commemorated the violent suppression of the June 4, 1989, Tiananmen pro- democracy protests. Soon after, police arrived at Deng’s home. Deng reportedly deleted the tweet. Authorities detained him early on May 17. Associates speculated that authorities detained Deng over the tweet. Authorities previously detained 5 individuals in connection with the commemorative liquor bottles, including Fu Hailu, who allegedly designed and produced the liquor bottle lable. Deng has worked with documentary filmmaker Ai Xiaoming and volunteers for an organization helping persons living with HIV/AIDS. ',
             location: {
-                center: [116.45, 39.91],
+                center: [30.65, 104],
                 zoom: 11,
                 pitch: 0,
                 bearing: 0
