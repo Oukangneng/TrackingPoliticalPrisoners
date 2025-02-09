@@ -37,7 +37,7 @@ const config = {
         {
             id: 'stage2-swipe1',
             title: 'Husenjan Esqer',
-            image: './images/personB1.jpg',
+            image: './data/polp2.png',
             description: 'Content for Person B, swipe 1.',
             location: {
                 center: [121.4737, 31.2304], // Shanghai
