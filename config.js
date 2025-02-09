@@ -12,7 +12,7 @@ const config = {
             image: './data/pie chart 1.jpg',
             description: 'As of 2019, the Congressional-Executive Commission on China (CECC)’s Political Prisoner Database contains information on a total of 9,975 cases of political or religious imprisonment in China. Of those, there are more than 1,598 cases of current political imprisonment in China.',
             location: {
-                center: [39.9042, 116.4074], // Beijing
+                center: [116.4074, 39.9042], // Beijing
                 zoom: 2,
                 pitch: 0,
                 bearing: 0
