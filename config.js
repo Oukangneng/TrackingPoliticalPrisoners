@@ -23,7 +23,7 @@ const config = {
         {
             id: 'stage1-swipe2',
             title: 'Stage 1: Person A - Swipe 2',
-            image: './images/personA2.jpg',
+            image: './data/polp2.png',
             description: 'Content for Person A, swipe 2.',
             location: {
                 center: [116.45, 39.91],
