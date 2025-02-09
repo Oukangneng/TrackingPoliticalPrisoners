@@ -8,7 +8,7 @@ const config = {
     chapters: [
         {
             id: 'stage1-swipe1',
-            title: 'Stage 1: Person A - Swipe 1',
+            title: 'Tracking Chinese Political Prisoners',
             image: './images/personA1.jpg',
             description: 'Content for Person A, swipe 1.',
             location: {
