@@ -4,7 +4,7 @@ const config = {
     showMarkers: false,
     theme: 'dark',
     alignment: 'left',
-    footer: 'Map Person Stages | Customize your content and images',
+    footer: 'Tracking Chinese Political Prisoners',
     chapters: [
         {
             id: 'stage1-swipe1',
