@@ -22,7 +22,7 @@ const config = {
         },
         {
             id: 'stage1-swipe2',
-            title: 'Stage 1: Person A - Swipe 2',
+            title: 'Deng Chaunbin',
             image: './data/polp2.png',
             description: 'Content for Person A, swipe 2.',
             location: {
