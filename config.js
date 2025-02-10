@@ -124,8 +124,8 @@ const config = {
             image: './images/personE1.jpg',
             description: 'Content for Person E, swipe 1.',
             location: {
-                center: [114.0579, 22.5431], // Shenzhen
-                zoom: 10,
+                center: [116.4074, 39.9042], // Beijing
+                zoom: 2,
                 pitch: 0,
                 bearing: 0
             },
@@ -137,7 +137,7 @@ const config = {
             title: 'Stage 5: Person E - Swipe 2',
             image: './images/personE2.jpg',
             description: 'Content for Person E, swipe 2.',
-           location: {
+            location: {
                 center: [116.4074, 39.9042], // Beijing
                 zoom: 2,
                 pitch: 0,
