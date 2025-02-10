@@ -24,25 +24,28 @@ const config = {
             id: 'stage1-swipe2',
             title: 'Deng Chaunbin',
             image: './data/polp1.png',
-            description: 
-<b>Chinese Name:</b> 邓传彬<br>
-<b>Occupation:</b> Filmmaker, Documentary Videographer<br>
-<b>Issue Codes:</b> June 4, 1989 Protests/Speech<br>
-<b>Date of Detention:</b> May 17, 2019<br>
-<b>Legal Process:</b> Public Security Bureau (PSB) Detention<br>
-<b>Detention Facility:</b> Nanxi PSB Detention Center<br>
-<b>Detention Location:</b> Sichuan Province<br><br>
+            description: `
+            <div class="story-text">
+                <b>Chinese Name:</b> 邓传彬<br>
+                <b>Occupation:</b> Filmmaker, Documentary Videographer<br>
+                <b>Issue Codes:</b> June 4, 1989 Protests/Speech<br>
+                <b>Date of Detention:</b> May 17, 2019<br>
+                <b>Legal Process:</b> Public Security Bureau (PSB) Detention<br>
+                <b>Detention Facility:</b> Nanxi PSB Detention Center<br>
+                <b>Detention Location:</b> Sichuan Province<br><br>
 
-<b>Case Details:</b><br>
-- On **May 17, 2019**, public security officials in **Yibin, Sichuan** detained **Deng Chuanbin**, a documentary filmmaker.<br>
-- He was charged with **"picking quarrels and provoking trouble"** and held at **Nanxi PSB Detention Center**.<br>
-- The arrest came **one day after** Deng posted a photo on Twitter of a **liquor bottle commemorating the June 4, 1989, Tiananmen Square crackdown**.<br>
-- Soon after his post, police arrived at his home. Deng reportedly **deleted the tweet**, but authorities detained him early the next morning.<br>
-- Observers believe his arrest was directly linked to the tweet.<br>
-- Authorities previously detained **five others** related to the commemorative liquor bottles, including **Fu Hailu**, the alleged designer.<br><br>
+                <b>Case Details:</b><br>
+                - On <b>May 17, 2019</b>, public security officials in <b>Yibin, Sichuan</b> detained <b>Deng Chuanbin</b>, a documentary filmmaker.<br>
+                - He was charged with <b>"picking quarrels and provoking trouble"</b> and held at <b>Nanxi PSB Detention Center</b>.<br>
+                - The arrest came <b>one day after</b> Deng posted a photo on Twitter of a <b>liquor bottle commemorating the June 4, 1989, Tiananmen Square crackdown</b>.<br>
+                - Soon after his post, police arrived at his home. Deng reportedly <b>deleted the tweet</b>, but authorities detained him early the next morning.<br>
+                - Observers believe his arrest was directly linked to the tweet.<br>
+                - Authorities previously detained <b>five others</b> related to the commemorative liquor bottles, including <b>Fu Hailu</b>, the alleged designer.<br><br>
 
-<b>Background:</b><br>
-Deng has collaborated with documentary filmmaker **Ai Xiaoming** and volunteers for an organization supporting **people living with HIV/AIDS**.
+                <b>Background:</b><br>
+                Deng has collaborated with documentary filmmaker <b>Ai Xiaoming</b> and volunteers for an organization supporting <b>people living with HIV/AIDS</b>.
+            </div>
+            `,
             location: {
                 center: [104, 30.65], // Sichuan
                 zoom: 11,
