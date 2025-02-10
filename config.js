@@ -24,7 +24,7 @@ const config = {
             id: 'stage1-swipe2',
             title: 'Deng Chaunbin',
             image: './data/polp1.png',
-            description: `
+            description: 
 <b>Chinese Name:</b> 邓传彬<br>
 <b>Occupation:</b> Filmmaker, Documentary Videographer<br>
 <b>Issue Codes:</b> June 4, 1989 Protests/Speech<br>
