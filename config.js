@@ -43,7 +43,6 @@ const config = {
 
 <b>Background:</b><br>
 Deng has collaborated with documentary filmmaker **Ai Xiaoming** and volunteers for an organization supporting **people living with HIV/AIDS**.
-
             location: {
                 center: [104, 30.65], // Sichuan
                 zoom: 11,
