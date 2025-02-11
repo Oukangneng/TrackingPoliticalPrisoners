@@ -10,7 +10,7 @@ const config = {
             id: 'stage1-swipe1',
             title: 'Tracking Chinese Political Prisoners | By Owen OConnell',
             image: './data/pie chart 1.jpg',
-            description:  'As of 2019, the Congressional-Executive Commission on China (CECC)’s Political Prisoner Database contains information on a total of 9,975 cases of political or religious imprisonment in China. Of those, there are more than 1,598 cases of current political imprisonment in China. <br><br>This data visualization will explore the lives of five political prisoners from diverse professional backgrounds.<br><br>Sources: Political Prisoner Database & CHRD.',
+            description:  'As of 2019, the Congressional-Executive Commission on China (CECC)’s Political Prisoner Database contains information on a total of 9,975 cases of political or religious imprisonment in China. Of those, there are more than 1,598 cases of current political imprisonment in China. <br><br>This data visualization will explore the lives of five political prisoners from diverse professional backgrounds.<br><br>Sources: Political Prisoner Database & CHRD',
             location: {
                 center: [116.4074, 39.9042], // Beijing
                 zoom: 2,
