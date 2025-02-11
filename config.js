@@ -65,7 +65,7 @@ const config = {
         {
             id: 'stage3-swipe1',
             title: 'Stage 3: Person C - Swipe 1',
-            image: './images/personC1.jpg',
+            image: './data/HuPingping.jpeg',
             description: 'Content for Person C, swipe 1.',
             location: {
                 center: [113.2644, 23.1291], // Guangzhou
