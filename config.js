@@ -22,8 +22,7 @@ const config = {
         },
         {
             id: 'stage1-swipe2',
-            title: 'Deng Chaunbin (晃晃), 49',
-            subtitle: 'Independent Filmmaker, Activist, and Human Rights Defender',
+            title: 'Deng Chaunbin (晃晃), 49<br><span style="font-size:16px; font-weight:normal;">Independent Filmmaker, Activist, and Human Rights Defender</span>',
             image: './data/polp1.png',
             description: 'Deng Chuanbin (邓传彬) is a 49-year-old independent filmmaker and activist known for his human rights advocacy. He was detained by Sichuan police on May 16, 2019, after tweeting an image referencing the Tiananmen Massacre, part of a broader crackdown on activists during the 30th anniversary of the event. Authorities denied him legal representation, subjected him to forced medication, and allegedly beat him while in detention. Deng became involved in activism after the 2008 Sichuan Earthquake and later worked on HIV/AIDS awareness projects. Prior to his detention, he faced state intimidation, including being barred from traveling to a UN human rights seminar in 2015.',
             location: {
