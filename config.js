@@ -24,34 +24,23 @@ const config = {
             id: 'stage1-swipe2',
             title: 'Deng Chaunbin',
             image: './data/polp1.png',
-            description: "<ul> \
-    <li><strong>Chinese Name:</strong> 邓传彬 (Deng Chuanbin)</li> \
-    <li><strong>Occupation:</strong> Filmmaker, documentary videographer</li> \
-    <li><strong>Issue Code:</strong> June 4, 1989, protests/speech</li> \
-    <li><strong>Date of Detention:</strong> May 17, 2019</li> \
-    <li><strong>Legal Process:</strong> Criminal detention by Public Security Bureau (PSB)</li> \
-    <li><strong>Detention Facility:</strong> Nanxi PSB Detention Center</li> \
-    <li><strong>Detention Location:</strong> Nanxi District, Yibin, Sichuan Province</li> \
-    <li><strong>Incident Details:</strong> \
-        <ul> \
-            <li>On May 16, 2019, Deng posted an image on Twitter of a commemorative liquor bottle referencing the 1989 Tiananmen protests.</li> \
-            <li>Authorities arrived at his home shortly after, and he reportedly deleted the tweet.</li> \
-            <li>He was detained early on May 17 on suspicion of 'picking quarrels and provoking trouble.'</li> \
-        </ul> \
-    </li> \
-    <li><strong>Related Cases:</strong> \
-        <ul> \
-            <li>Authorities previously detained five others in connection with the liquor bottle, including Fu Hailu, who allegedly designed the label.</li> \
-        </ul> \
-    </li> \
-    <li><strong>Background:</strong> \
-        <ul> \
-            <li>Deng has collaborated with documentary filmmaker Ai Xiaoming.</li> \
-            <li>He volunteers with an organization supporting people living with HIV/AIDS.</li> \
-        </ul> \
-    </li> \
-    <li><strong>Sources:</strong> RDN (May 18, 23, 2019), HKFP (May 24, 2019), CRLW (May 18, 2019), China Aid (May 20, 2019).</li> \
-</ul>",
+            description: `
+<ul>
+    <li><strong>Chinese Name:</strong> 邓传彬 (Deng Chuanbin)</li>
+    <li><strong>Occupation:</strong> Filmmaker, documentary videographer</li>
+    <li><strong>Issue Code:</strong> June 4, 1989, protests/speech</li>
+    <li><strong>Date of Detention:</strong> May 17, 2019</li>
+    <li><strong>Legal Process:</strong> Criminal detention by Public Security Bureau (PSB)</li>
+    <li><strong>Detention Facility:</strong> Nanxi PSB Detention Center</li>
+    <li><strong>Detention Location:</strong> Nanxi District, Yibin, Sichuan Province</li>
+    <li><strong>Incident Details:</strong>
+        <ul>
+            <li>On May 16, 2019, Deng posted an image on Twitter of a commemorative liquor bottle referencing the 1989 Tiananmen protests.</li>
+            <li>Authorities arrived at his home shortly after, and he reportedly deleted the tweet.</li>
+            <li>He was detained early on May 17 on suspicion of "picking quarrels and provoking trouble."</li>
+        </ul>
+    </li>
+</ul>',
             location: {
                 center: [104, 30.65], // Sichuan
                 zoom: 11,
