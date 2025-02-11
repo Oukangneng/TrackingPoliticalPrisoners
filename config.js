@@ -64,7 +64,7 @@ const config = {
         },
         {
             id: 'stage3-swipe1',
-            title: 'Stage 3: Person C - Swipe 1',
+            title: 'Hu Pingping',
             image: './data/HuPingping.jpeg',
             description: 'Content for Person C, swipe 1.',
             location: {
