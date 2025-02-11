@@ -78,8 +78,8 @@ const config = {
         },
         {
             id: 'stage3-swipe2',
-            title: 'Stage 3: Person C - Swipe 2',
-            image: './images/personC2.jpg',
+            title: 'Wu Shuang',
+            image: './data/WuShuang.jpeg',
             description: 'Content for Person C, swipe 2.',
             location: {
                 center: [113.30, 23.13],
