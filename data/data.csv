@@ -5,7 +5,5 @@ stage,person,swipe,text,image,lng,lat,zoom
 2,Person B,2,"Content for Person B swipe 2.","personB2.jpg",121.50,31.22,11
 3,Person C,1,"Content for Person C swipe 1.","personC1.jpg",113.2644,23.1291,10
 3,Person C,2,"Content for Person C swipe 2.","personC2.jpg",113.30,23.13,11
-4,Person D,1,"Content for Person D swipe 1.","personD1.jpg",104.0665,30.5728,10
-4,Person D,2,"Content for Person D swipe 2.","personD2.jpg",104.10,30.57,11
 5,Person E,1,"Content for Person E swipe 1.","personE1.jpg",116.4074,39.9042,2
 5,Person E,2,"Content for Person E swipe 2.","personE2.jpg",116.4074,39.9042,2
