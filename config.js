@@ -52,8 +52,7 @@ const config = {
                 </ul>
             </li>
             <li><strong>Sources:</strong> RDN (May 18, 23, 2019), HKFP (May 24, 2019), CRLW (May 18, 2019), China Aid (May 20, 2019).</li>
-        </ul>
-    `,
+        </ul>`,
             location: {
                 center: [104, 30.65], // Sichuan
                 zoom: 11,
