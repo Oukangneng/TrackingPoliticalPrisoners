@@ -91,34 +91,6 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'stage4-swipe1',
-            title: 'Stage 4: Person D - Swipe 1',
-            image: './images/personD1.jpg',
-            description: 'Content for Person D, swipe 1.',
-            location: {
-                center: [104.0665, 30.5728], // Chengdu
-                zoom: 10,
-                pitch: 0,
-                bearing: 0
-            },
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'stage4-swipe2',
-            title: 'Stage 4: Person D - Swipe 2',
-            image: './images/personD2.jpg',
-            description: 'Content for Person D, swipe 2.',
-            location: {
-                center: [104.10, 30.57],
-                zoom: 11,
-                pitch: 0,
-                bearing: 0
-            },
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
             id: 'stage5-swipe1',
             title: 'Stage 5: Person E - Swipe 1',
             image: './images/personE1.jpg',
