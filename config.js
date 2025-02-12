@@ -107,7 +107,6 @@ const config = {
         {
             id: 'stage5-swipe2',
             title: 'Final Slide',
-            description: '
             description: '<span style="font-size:24px">Since 2014, over 34,000 migrants have died or gone missing on their journeys to a better life.</span><br><br><span style="font-size:18px"><i>How Can You Get Involved?</i></span><br><br>The following organizations fight for supporting political and religious prisoners in China:<br></p><ul><li><a target = "_blank" href="https://www.cecc.gov/resources/political-prisoner-database/">Congressional-Executive Commsion on China’s Political Prisoner Database</a></li><li><a target = "_blank" href="https://duihua.org/">Dui Hua Foundationr</a></li><li><a target = "_blank" href="https://www.nchrd.org/">Chinese Human Rights Defendersl</a></li></ul>',
             location: {
                 center: [116.4074, 39.9042], // Beijing
