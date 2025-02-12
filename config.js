@@ -54,8 +54,8 @@ const config = {
             image: './data/PuWenqing.jpeg',
             description: 'Pu Wenqing, an 85-year-old retired doctor, has been a vocal advocate for her son, Huang Qi, the founder of the rights website 64 Tianwang, who has been detained since 2016 on alleged state secrets charges. On December 7, 2018, security officials detained Pu at Beijing West Railway Station, forcibly returning her to Chengdu, where she was placed under home confinement in January 2019. Authorities have continuously harassed her due to her activism, even physically assaulting her at the railway station. Despite suffering from lung cancer and other severe health issues, Pu has persistently raised concerns about her son’s mistreatment in detention, including reports of beatings and worsening health.',
             location: {
-                center: [121.50, 31.22],
-                zoom: 11,
+                center: [104.06, 30.57],
+                zoom: 9,
                 pitch: 0,
                 bearing: 0
             },
@@ -68,7 +68,7 @@ const config = {
             image: './data/HuPingping.jpeg',
             description: 'Hu Pingping, a university graduate and labor rights supporter, was detained on August 24, 2018, along with Wu Haiyu and about 50 others for supporting detained Shenzhen Jasic factory workers attempting to form a labor union. Police in riot gear arrested them in Huizhou, Guangdong, and held Hu and Wu at Shenzhen No. 2 PSB Detention Center before releasing them on bail. Hu, who worked in Guangzhou’s Huangpu district, had assisted families of detained workers and previously sued local police over their handling of a labor dispute. Her arrest was part of a broader crackdown that saw over 60 individuals detained, with around 32 still in custody as of December 7, 2018.',
             location: {
-                center: [113.2644, 23.1291], // Guangzhou
+                center: [114.05, 22.54], // Guangzhou
                 zoom: 10,
                 pitch: 0,
                 bearing: 0
@@ -82,7 +82,7 @@ const config = {
             image: './data/WuShuang.jpeg',
             description: 'Wu Shuang was among the 30 JASIC factory workers and supporters detained on July 27, 2018, in Shenzhen for "picking quarrels and provoking trouble" amid efforts to form a labor union. Her husband, Liu Penghua, was also detained as part of the broader crackdown, which saw over 60 individuals arrested between July and November. While some detainees were later released, 32 remained in custody as of December 7, 2018. Wu was held at the Longgang PSB Detention Center before being released on bail on September 3.',
             location: {
-                center: [113.30, 23.13],
+                center: [114.05, 22.54],
                 zoom: 11,
                 pitch: 0,
                 bearing: 0
