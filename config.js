@@ -91,20 +91,6 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'stage5-swipe1',
-            title: 'Stage 5: Person E - Swipe 1',
-            image: './images/personE1.jpg',
-            description: 'Content for Person E, swipe 1.',
-            location: {
-                center: [116.4074, 39.9042], // Beijing
-                zoom: 2,
-                pitch: 0,
-                bearing: 0
-            },
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
             id: 'stage5-swipe2',
             title: 'Final Slide',
             description: '<span style="font-size:24px">INSERT FACT.</span><br><br><span style="font-size:18px"><i>How Can You Get Involved?</i></span><br><br>The following organizations fight for supporting political and religious prisoners in China:<br></p><ul><li><a target = "_blank" href="https://www.cecc.gov/resources/political-prisoner-database/">Congressional-Executive Commsion on China’s Political Prisoner Database</a></li><li><a target = "_blank" href="https://duihua.org/">Dui Hua Foundationr</a></li><li><a target = "_blank" href="https://www.nchrd.org/">Chinese Human Rights Defenders</a></li></ul>',
