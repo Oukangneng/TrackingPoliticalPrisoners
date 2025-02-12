@@ -106,9 +106,8 @@ const config = {
         },
         {
             id: 'stage5-swipe2',
-            title: 'Stage 5: Person E - Swipe 2',
-            image: './images/personE2.jpg',
-            description: 'Content for Person E, swipe 2.',
+            title: 'Final Slide',
+            description: 'More info. <br><br> More info. <br><br> More info. ',
             location: {
                 center: [116.4074, 39.9042], // Beijing
                 zoom: 2,
