@@ -66,7 +66,7 @@ const config = {
             id: 'stage3-swipe1',
             title: 'Hu Pingping',
             image: './data/HuPingping.jpeg',
-            description: 'Content for Person C, swipe 1.',
+            description: 'Hu Pingping, a university graduate and labor rights supporter, was detained on August 24, 2018, along with Wu Haiyu and about 50 others for supporting detained Shenzhen Jasic factory workers attempting to form a labor union. Police in riot gear arrested them in Huizhou, Guangdong, and held Hu and Wu at Shenzhen No. 2 PSB Detention Center before releasing them on bail. Hu, who worked in Guangzhou’s Huangpu district, had assisted families of detained workers and previously sued local police over their handling of a labor dispute. Her arrest was part of a broader crackdown that saw over 60 individuals detained, with around 32 still in custody as of December 7, 2018.',
             location: {
                 center: [113.2644, 23.1291], // Guangzhou
                 zoom: 10,
