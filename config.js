@@ -52,7 +52,7 @@ const config = {
             id: 'stage2-swipe2',
             title: 'Pu Wenqing',
             image: './data/PuWenqing.jpeg',
-            description: 'Content for Person B, swipe 2.',
+            description: 'Pu Wenqing, an 85-year-old retired doctor, has been a vocal advocate for her son, Huang Qi, the founder of the rights website 64 Tianwang, who has been detained since 2016 on alleged state secrets charges. On December 7, 2018, security officials detained Pu at Beijing West Railway Station, forcibly returning her to Chengdu, where she was placed under home confinement in January 2019. Authorities have continuously harassed her due to her activism, even physically assaulting her at the railway station. Despite suffering from lung cancer and other severe health issues, Pu has persistently raised concerns about her son’s mistreatment in detention, including reports of beatings and worsening health.',
             location: {
                 center: [121.50, 31.22],
                 zoom: 11,
