@@ -1,123 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taiwan Undersea Cable Incidents</title>
-    
-    <!-- Mapbox -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.0/mapbox-gl.css" rel="stylesheet" />
-    
-    <!-- Scrollama for scrollytelling -->
+    <meta charset='utf-8' />
+    <title>Tracking Political Prisoners in China</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
 
-    <!-- CSS Styles -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tracking Political Prisoners in China">
+    <meta name="twitter:description" content="A project with 5 stages, each associated with a person.">
+    <meta name="twitter:image" content="./images/thumbnail.jpg">
+    <link rel="icon" href="./images/thumbnail.jpg">
+
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            background: #000;
-            height: 100%;
-            overflow: hidden;
+        @import url('https://rsms.me/inter/inter.css');
+        html { font-family: 'Inter', sans-serif; }
+        @supports (font-variation-settings: normal) {
+          html { font-family: 'Inter var', sans-serif; }
         }
-
+        body {
+            margin: 0; 
+            padding: 0; 
+            font-family: "Inter", sans-serif;
+        }
+        a, a:hover, a:visited {
+            color: #ff2424;
+        }
         #map {
+            top: 0; 
+            height: 100vh;
+            width: 100vw;
             position: fixed;
-            top: 0;
-            bottom: 0;
+            z-index: -5;
+        }
+        #header {
+            margin: 3vh auto;
+            width: 90vw;
+            padding: 2vh;
+            text-align: center;
+        }
+        #footer {
+            width: 100%;
+            min-height: 5vh;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            text-align: center;
+            line-height: 25px;
+            font-size: 13px;
+        }
+        #features {
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+            z-index: 100;
+        }
+        .centered {
+            width: 50vw;
+            margin: 0 auto;
+        }
+        .lefty {
+            width: 33vw;
+            margin-left: 5vw;
+        }
+        .righty {
+            width: 33vw;
+            margin-left: 62vw;
+        }
+        .light {
+            color: #444;
+            background-color: #fafafa;
+        }
+        .dark {
+            color: #fafafa;
+            background-color: black;
+        }
+        .step {
+            padding-bottom: 50vh;
+            opacity: 0.25;
+        }
+        .step.active {
+            opacity: 0.9;
+        }
+        .step div {
+            padding: 25px 50px;
+            line-height: 25px;
+            font-size: 13px;
+        }
+        .step img {
             width: 100%;
         }
-
-        #story {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 35%;
-            height: 100%;
-            overflow-y: scroll;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 10;
-        }
-
-        .chapter {
-            padding: 30px;
-            margin: 30px;
-            background: #1a1a1a;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-            transition: transform 0.3s;
-        }
-
-        .chapter img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-
-        .chapter h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        .chapter p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        .active {
-            transform: scale(1.05);
-            background: #333;
-        }
-
-        /* Scrollbar Styling */
-        #story::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        #story::-webkit-scrollbar-thumb {
-            background: #555;
-            border-radius: 8px;
-        }
-
-        #story::-webkit-scrollbar-track {
-            background: #222;
+        @media (max-width: 750px) {
+            #features {
+                width: 90vw;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 <body>
 
-<!-- Map container -->
 <div id="map"></div>
-
-<!-- Story container -->
 <div id="story"></div>
 
-<!-- Config -->
 <script src="./config.js"></script>
-
 <script>
-    mapboxgl.accessToken = config.accessToken;
+    var layerTypes = {
+        'fill': ['fill-opacity'],
+        'line': ['line-opacity'],
+        'circle': ['circle-opacity', 'circle-stroke-opacity'],
+        'symbol': ['icon-opacity', 'text-opacity'],
+        'raster': ['raster-opacity'],
+        'fill-extrusion': ['fill-extrusion-opacity'],
+        'heatmap': ['heatmap-opacity']
+    };
 
-    const map = new mapboxgl.Map({
+    var alignments = {
+        'left': 'lefty',
+        'center': 'centered',
+        'right': 'righty'
+    };
+
+    function getLayerPaintType(layer) {
+        var layerType = map.getLayer(layer).type;
+        return layerTypes[layerType];
+    }
+
+    function setLayerOpacity(layer) {
+        var paintProps = getLayerPaintType(layer.layer);
+        paintProps.forEach(function(prop) {
+            map.setPaintProperty(layer.layer, prop, layer.opacity);
+        });
+    }
+
+    var story = document.getElementById('story');
+    var features = document.createElement('div');
+    features.classList.add(alignments[config.alignment]);
+    features.setAttribute('id', 'features');
+
+    // Optional header (if defined in config)
+    if (config.title || config.subtitle || config.byline) {
+        var header = document.createElement('div');
+        if (config.title) {
+            var titleText = document.createElement('h1');
+            titleText.innerText = config.title;
+            header.appendChild(titleText);
+        }
+        if (config.subtitle) {
+            var subtitleText = document.createElement('h2');
+            subtitleText.innerText = config.subtitle;
+            header.appendChild(subtitleText);
+        }
+        if (config.byline) {
+            var bylineText = document.createElement('p');
+            bylineText.innerText = config.byline;
+            header.appendChild(bylineText);
+        }
+        if (header.innerText.length > 0) {
+            header.classList.add(config.theme);
+            header.setAttribute('id', 'header');
+            story.appendChild(header);
+        }
+    }
+
+    // Create chapter sections from config
+    config.chapters.forEach((record, idx) => {
+        var container = document.createElement('div');
+        container.setAttribute('id', record.id);
+        container.classList.add('step');
+        if (idx === 0) {
+            container.classList.add('active');
+        }
+        var chapter = document.createElement('div');
+        if (record.title) {
+            var title = document.createElement('h3');
+            title.innerText = record.title;
+            chapter.appendChild(title);
+        }
+        if (record.image) {
+            var image = new Image();
+            image.src = record.image;
+            chapter.appendChild(image);
+        }
+        if (record.description) {
+            var text = document.createElement('p');
+            text.innerHTML = record.description;
+            chapter.appendChild(text);
+        }
+        chapter.classList.add(config.theme);
+        container.appendChild(chapter);
+        features.appendChild(container);
+    });
+    story.appendChild(features);
+
+    // Optional footer (if defined in config)
+    if (config.footer) {
+        var footer = document.createElement('div');
+        var footerText = document.createElement('p');
+        footerText.innerHTML = config.footer;
+        footer.appendChild(footerText);
+        footer.classList.add(config.theme);
+        footer.setAttribute('id', 'footer');
+        story.appendChild(footer);
+    }
+
+    mapboxgl.accessToken = config.accessToken;
+    const transformRequest = (url) => {
+        const hasQuery = url.indexOf("?") !== -1;
+        const suffix = hasQuery ? "&pluginName=MapPersonStages" : "?pluginName=MapPersonStages";
+        return { url: url + suffix };
+    };
+
+    var map = new mapboxgl.Map({
         container: 'map',
         style: config.style,
         center: config.chapters[0].location.center,
         zoom: config.chapters[0].location.zoom,
+        bearing: config.chapters[0].location.bearing,
         pitch: config.chapters[0].location.pitch,
-        bearing: config.chapters[0].location.bearing
+        scrollZoom: false,
+        transformRequest: transformRequest
     });
 
-    const story = document.getElementById('story');
+    var marker = new mapboxgl.Marker();
+    if (config.showMarkers) {
+        marker.setLngLat(config.chapters[0].location.center).addTo(map);
+    }
 
-    // Populate story container with chapters
-    config.chapters.forEach((chapter, index) => {
-        const container = document.createElement('div');
-        container.id = chapter.id;
-        container.className = 'chapter';
+    // Initialize scrollama
+    var scroller = scrollama();
+    map.on("load", function() {
+        scroller.setup({
+            step: '.step',
+            offset: 0.5,
+            progress: true
+        })
+        .onStepEnter(response => {
+            var chapter = config.chapters.find(chap => chap.id === response.element.id);
+            response.element.classList.add('active');
+            map.flyTo(chapter.location);
+            if (config.showMarkers) {
+                marker.setLngLat(chapter.location.center);
+            }
+            if (chapter.onChapterEnter.length > 0) {
+                chapter.onChapterEnter.forEach(setLayerOpacity);
+            }
+        })
+        .onStepExit(response => {
+            var chapter = config.chapters.find(chap => chap.id === response.element.id);
+            response.element.classList.remove('active');
+            if (chapter.onChapterExit.length > 0) {
+                chapter.onChapterExit.forEach(setLayerOpacity);
+            }
+        });
+    });
+    window.addEventListener('resize', scroller.resize);
+</script>
 
-        if (chapter.image
+</body>
+</html>
